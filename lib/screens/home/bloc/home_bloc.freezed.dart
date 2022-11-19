@@ -19,32 +19,38 @@ mixin _$HomeEvent {
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function() started,
+    required TResult Function() deleteAll,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? started,
+    TResult? Function()? deleteAll,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? started,
+    TResult Function()? deleteAll,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
     required TResult Function(Started value) started,
+    required TResult Function(DeleteAll value) deleteAll,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(Started value)? started,
+    TResult? Function(DeleteAll value)? deleteAll,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
     TResult Function(Started value)? started,
+    TResult Function(DeleteAll value)? deleteAll,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -104,6 +110,7 @@ class _$Started implements Started {
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function() started,
+    required TResult Function() deleteAll,
   }) {
     return started();
   }
@@ -112,6 +119,7 @@ class _$Started implements Started {
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? started,
+    TResult? Function()? deleteAll,
   }) {
     return started?.call();
   }
@@ -120,6 +128,7 @@ class _$Started implements Started {
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? started,
+    TResult Function()? deleteAll,
     required TResult orElse(),
   }) {
     if (started != null) {
@@ -132,6 +141,7 @@ class _$Started implements Started {
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
     required TResult Function(Started value) started,
+    required TResult Function(DeleteAll value) deleteAll,
   }) {
     return started(this);
   }
@@ -140,6 +150,7 @@ class _$Started implements Started {
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(Started value)? started,
+    TResult? Function(DeleteAll value)? deleteAll,
   }) {
     return started?.call(this);
   }
@@ -148,6 +159,7 @@ class _$Started implements Started {
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
     TResult Function(Started value)? started,
+    TResult Function(DeleteAll value)? deleteAll,
     required TResult orElse(),
   }) {
     if (started != null) {
@@ -159,6 +171,108 @@ class _$Started implements Started {
 
 abstract class Started implements HomeEvent {
   const factory Started() = _$Started;
+}
+
+/// @nodoc
+abstract class _$$DeleteAllCopyWith<$Res> {
+  factory _$$DeleteAllCopyWith(
+          _$DeleteAll value, $Res Function(_$DeleteAll) then) =
+      __$$DeleteAllCopyWithImpl<$Res>;
+}
+
+/// @nodoc
+class __$$DeleteAllCopyWithImpl<$Res>
+    extends _$HomeEventCopyWithImpl<$Res, _$DeleteAll>
+    implements _$$DeleteAllCopyWith<$Res> {
+  __$$DeleteAllCopyWithImpl(
+      _$DeleteAll _value, $Res Function(_$DeleteAll) _then)
+      : super(_value, _then);
+}
+
+/// @nodoc
+
+class _$DeleteAll implements DeleteAll {
+  const _$DeleteAll();
+
+  @override
+  String toString() {
+    return 'HomeEvent.deleteAll()';
+  }
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType && other is _$DeleteAll);
+  }
+
+  @override
+  int get hashCode => runtimeType.hashCode;
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() started,
+    required TResult Function() deleteAll,
+  }) {
+    return deleteAll();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? started,
+    TResult? Function()? deleteAll,
+  }) {
+    return deleteAll?.call();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? started,
+    TResult Function()? deleteAll,
+    required TResult orElse(),
+  }) {
+    if (deleteAll != null) {
+      return deleteAll();
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(Started value) started,
+    required TResult Function(DeleteAll value) deleteAll,
+  }) {
+    return deleteAll(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(Started value)? started,
+    TResult? Function(DeleteAll value)? deleteAll,
+  }) {
+    return deleteAll?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(Started value)? started,
+    TResult Function(DeleteAll value)? deleteAll,
+    required TResult orElse(),
+  }) {
+    if (deleteAll != null) {
+      return deleteAll(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class DeleteAll implements HomeEvent {
+  const factory DeleteAll() = _$DeleteAll;
 }
 
 /// @nodoc

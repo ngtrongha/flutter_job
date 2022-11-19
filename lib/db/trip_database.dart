@@ -107,13 +107,11 @@ CREATE TABLE $tableNotes(
     );
   }
 
-  Future<int> deleteAll(int id) async {
+  Future<int> deleteAll() async {
     final db = await instance.database;
 
     return await db.delete(
       tableNotes,
-      where: '${TripFields.id} = ?',
-      whereArgs: [id],
     );
   }
 

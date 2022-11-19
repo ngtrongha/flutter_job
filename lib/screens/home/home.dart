@@ -22,6 +22,17 @@ class HomeScreen extends StatelessWidget {
             appBar: AppBar(
               automaticallyImplyLeading: false,
               title: 'All Trips'.bodyMedium(color: Colors.white),
+              actions: [
+                if (state.trips.isNotEmpty)
+                  IconButton(
+                    onPressed: () => bloc.add(const DeleteAll()),
+                    icon: Icon(
+                      Icons.delete,
+                      color: Colors.white,
+                      size: 20.sp,
+                    ),
+                  ).marginOnly(right: 10)
+              ],
             ),
             floatingActionButton: FloatingActionButton(
               onPressed: () async {
@@ -35,7 +46,6 @@ class HomeScreen extends StatelessWidget {
                 size: 20.sp,
               ),
             ),
-            
             body: SafeArea(
               child: state.trips.isNotEmpty
                   ? SingleChildScrollView(
