@@ -7,7 +7,7 @@ part of 'trip_model.dart';
 // **************************************************************************
 
 _$_TripModel _$$_TripModelFromJson(Map<String, dynamic> json) => _$_TripModel(
-      id: json['id'] as int? ?? 0,
+      id: json['id'] as int?,
       name: json['name'] as String? ?? '',
       destionation: json['destionation'] as String? ?? '[]',
       date:

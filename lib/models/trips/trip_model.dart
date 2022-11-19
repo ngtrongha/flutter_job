@@ -28,7 +28,7 @@ class TripFields {
 @freezed
 class TripModel with _$TripModel {
   const factory TripModel({
-    @Default(0) final int id,
+    final int? id,
     @Default('') final String name,
     @Default('[]') final String destionation,
     final DateTime? date,

@@ -20,7 +20,7 @@ TripModel _$TripModelFromJson(Map<String, dynamic> json) {
 
 /// @nodoc
 mixin _$TripModel {
-  int get id => throw _privateConstructorUsedError;
+  int? get id => throw _privateConstructorUsedError;
   String get name => throw _privateConstructorUsedError;
   String get destionation => throw _privateConstructorUsedError;
   DateTime? get date => throw _privateConstructorUsedError;
@@ -39,7 +39,7 @@ abstract class $TripModelCopyWith<$Res> {
       _$TripModelCopyWithImpl<$Res, TripModel>;
   @useResult
   $Res call(
-      {int id,
+      {int? id,
       String name,
       String destionation,
       DateTime? date,
@@ -60,7 +60,7 @@ class _$TripModelCopyWithImpl<$Res, $Val extends TripModel>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? id = null,
+    Object? id = freezed,
     Object? name = null,
     Object? destionation = null,
     Object? date = freezed,
@@ -68,10 +68,10 @@ class _$TripModelCopyWithImpl<$Res, $Val extends TripModel>
     Object? des = null,
   }) {
     return _then(_value.copyWith(
-      id: null == id
+      id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as int,
+              as int?,
       name: null == name
           ? _value.name
           : name // ignore: cast_nullable_to_non_nullable
@@ -104,7 +104,7 @@ abstract class _$$_TripModelCopyWith<$Res> implements $TripModelCopyWith<$Res> {
   @override
   @useResult
   $Res call(
-      {int id,
+      {int? id,
       String name,
       String destionation,
       DateTime? date,
@@ -123,7 +123,7 @@ class __$$_TripModelCopyWithImpl<$Res>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? id = null,
+    Object? id = freezed,
     Object? name = null,
     Object? destionation = null,
     Object? date = freezed,
@@ -131,10 +131,10 @@ class __$$_TripModelCopyWithImpl<$Res>
     Object? des = null,
   }) {
     return _then(_$_TripModel(
-      id: null == id
+      id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as int,
+              as int?,
       name: null == name
           ? _value.name
           : name // ignore: cast_nullable_to_non_nullable
@@ -163,7 +163,7 @@ class __$$_TripModelCopyWithImpl<$Res>
 @JsonSerializable()
 class _$_TripModel implements _TripModel {
   const _$_TripModel(
-      {this.id = 0,
+      {this.id,
       this.name = '',
       this.destionation = '[]',
       this.date,
@@ -174,8 +174,7 @@ class _$_TripModel implements _TripModel {
       _$$_TripModelFromJson(json);
 
   @override
-  @JsonKey()
-  final int id;
+  final int? id;
   @override
   @JsonKey()
   final String name;
@@ -231,7 +230,7 @@ class _$_TripModel implements _TripModel {
 
 abstract class _TripModel implements TripModel {
   const factory _TripModel(
-      {final int id,
+      {final int? id,
       final String name,
       final String destionation,
       final DateTime? date,
@@ -242,7 +241,7 @@ abstract class _TripModel implements TripModel {
       _$_TripModel.fromJson;
 
   @override
-  int get id;
+  int? get id;
   @override
   String get name;
   @override

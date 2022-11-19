@@ -33,7 +33,7 @@ class AddEditBloc extends Bloc<AddEditEvent, AddEditState> {
     on<ChooseRequire>(chooseRequire);
   }
   delete(Delete event, Emitter<AddEditState> emit) async {
-    await TripsDatabase.instance.delete(state.trip!.id).then((value) {
+    await TripsDatabase.instance.delete(state.trip!.id!).then((value) {
       Get.back();
       Get.snackbar('Notify', 'Successfully delete', colorText: Colors.green);
     });
@@ -61,15 +61,8 @@ class AddEditBloc extends Bloc<AddEditEvent, AddEditState> {
             require: state.require,
             des: desControl.text))
         .then((value) {
+      Get.back();
       Get.snackbar('Notify', 'Successfully added new', colorText: Colors.green);
-      nameControl.text = value.name;
-      destionationControl.text = value.destionation;
-      desControl.text = value.des;
-      emit(state.copyWith(
-        trip: value,
-        date: value.date,
-        require: value.require,
-      ));
     });
   }
 
